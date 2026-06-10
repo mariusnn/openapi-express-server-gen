@@ -1,0 +1,45 @@
+{
+  "name": "openapi-express-server-gen",
+  "version": "1.0.0",
+  "description": "Generate a typed Express server skeleton from an OpenAPI 3.x spec",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "openapi-express-server-gen": "./dist/cli.js"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "mariusnn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mariusnn/openapi-express-server-gen.git"
+  },
+  "keywords": ["openapi", "express", "codegen", "typescript", "server"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node scripts/copyStatic.js",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "openapi-typescript-validator": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "@types/jest": "^30.0.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.0.0",
+    "babel-jest": "^30.0.0",
+    "jest": "^30.0.0",
+    "openapi-types": "^12.1.3",
+    "typescript": "^5.0.0"
+  }
+}
