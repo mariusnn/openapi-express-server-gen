@@ -21,7 +21,7 @@ Generates a typed Express server skeleton from an OpenAPI 3.x spec. Given a spec
 ```bash
 npm install --save-dev openapi-express-server-gen
 npm install ajv
-npm install ajv-formats  # only required if addFormats is true (the default)
+npm install ajv-formats  # only required if addFormats is true (the default); v2 and v3 are both supported
 ```
 
 `ajv` and `ajv-formats` are runtime dependencies of the generated `decoders.ts` and must be installed in the consuming project.
