@@ -106,12 +106,12 @@ export function registerRoutes<TBearerAuth>(
 
 ## Consuming the generated code
 
-Implement the `Application` interface with your business logic, wrap your auth with `bearerAuth` from `utils/bearerAuthWrapper`, then pass both to `registerRoutes`:
+Implement the `Application` interface with your business logic, wrap your auth with `bearerAuth` from `utils`, then pass both to `registerRoutes`:
 
 ```typescript
 import express from 'express';
 import { registerRoutes } from './_generated/server';
-import { bearerAuth } from './_generated/server/utils/bearerAuthWrapper';
+import { bearerAuth } from './_generated/server/utils';
 
 const app = express();
 app.use(express.json());
