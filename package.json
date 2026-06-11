@@ -1,6 +1,6 @@
 {
   "name": "openapi-express-server-gen",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate a typed Express server skeleton from an OpenAPI 3.x spec",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -31,6 +31,15 @@
     "dev": "tsc -p tsconfig.build.json --watch",
     "test": "jest",
     "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "ajv": "^8.0.0",
+    "ajv-formats": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "ajv-formats": {
+      "optional": true
+    }
   },
   "dependencies": {
     "js-yaml": "^4.1.0",
